@@ -11,14 +11,20 @@ function App() {
     console.error('Ошибка загрузки:', error);
   };
   return (
-    <main>
-        <ImageUploader
-          uploadUrl="http://localhost:5000/api/upload"
-          maxFileSize={10 * 1024 * 1024} 
-          onUploadSuccess={handleUploadSuccess}
-          onUploadError={handleUploadError}
-        />
+    <div className="App">
+      <header className="App-header">
+        <h1>Загрузка изображений</h1>
+        <p>Загрузите изображение в формате JPG или PNG</p>
+      </header>
+      <main>
+          <ImageUploader
+            uploadUrl="http://localhost:5000/api/upload"
+            maxFileSize={10 * 1024 * 1024} 
+            onUploadSuccess={handleUploadSuccess}
+            onUploadError={handleUploadError}
+          />
       </main>
+    </div>
   )
 }
 
