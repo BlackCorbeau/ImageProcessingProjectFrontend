@@ -27,7 +27,7 @@ interface ImageUploaderProps {
 type ModelKey = keyof Omit<UploadResponse, 'best_model'>;
 
 const ImageUploader: React.FC<ImageUploaderProps> = ({
-  uploadUrl = "https://b.ip.rustprogersteam.ru:80/api/image",
+  uploadUrl = "http://localhost:5000/api/image",
   maxFileSize = 5 * 1024 * 1024, // 5MB
   allowedTypes = ["image/jpeg", "image/png", "image/jpg"],
   onUploadSuccess,
@@ -74,7 +74,7 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({
     };
     reader.readAsDataURL(file);
   };
-
+  
   const handleUpload = async () => {
     if (!selectedFile) {
       setError("Пожалуйста, выберите файл");
