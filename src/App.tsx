@@ -18,7 +18,7 @@ function App() {
       </header>
       <main>
           <ImageUploader
-            uploadUrl="http://localhost:5000/api/upload"
+            uploadUrl="https://b.ip.rustprogersteam.ru:80/api/image"
             maxFileSize={10 * 1024 * 1024} 
             onUploadSuccess={handleUploadSuccess}
             onUploadError={handleUploadError}

@@ -27,7 +27,7 @@ interface ImageUploaderProps {
 type ModelKey = keyof Omit<UploadResponse, 'best_model'>;
 
 const ImageUploader: React.FC<ImageUploaderProps> = ({
-  uploadUrl = "http://localhost:5000/api/upload",
+  uploadUrl = "https://b.ip.rustprogersteam.ru:80/api/image",
   maxFileSize = 5 * 1024 * 1024, // 5MB
   allowedTypes = ["image/jpeg", "image/png", "image/jpg"],
   onUploadSuccess,
